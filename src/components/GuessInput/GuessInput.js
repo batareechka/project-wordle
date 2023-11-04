@@ -1,17 +1,12 @@
 import React from "react";
 
-function GuessInput({ guesses, setGuesses }) {
+function GuessInput({ handleSubmitGuess }) {
   const WORD_LENGTH = 5;
   const [tentativeGuess, setTentativeGuess] = React.useState("");
 
   function handleSubmit(event) {
     event.preventDefault();
-    const nextGuesses = [...guesses];
-    nextGuesses.push({
-      id: crypto.randomUUID(),
-      value: tentativeGuess,
-    });
-    setGuesses(nextGuesses);
+    handleSubmitGuess(tentativeGuess);
     setTentativeGuess("");
   }
 
