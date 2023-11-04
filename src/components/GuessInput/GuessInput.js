@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
+import { WORD_LENGTH } from '../../constants';
 
 function GuessInput({ handleSubmitGuess }) {
-  const WORD_LENGTH = 5;
-  const [tentativeGuess, setTentativeGuess] = React.useState("");
+  const [tentativeGuess, setTentativeGuess] = React.useState('');
 
   function handleSubmit(event) {
     event.preventDefault();
     handleSubmitGuess(tentativeGuess);
-    setTentativeGuess("");
+    setTentativeGuess('');
   }
 
   return (
