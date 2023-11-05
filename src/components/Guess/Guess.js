@@ -8,7 +8,11 @@ function Guess({ guess }) {
       {range(WORD_LENGTH).map((num) => (
         <span
           key={num}
-          className={`cell ${guess?.checkInfo[num]?.status || undefined}`}
+          className={
+            guess?.checkInfo[num].status
+              ? `cell ${guess?.checkInfo[num].status}`
+              : `cell`
+          }
         >
           {guess?.value ? guess.value[num] : undefined}
         </span>
