@@ -185,6 +185,22 @@ h1 {
   color: white;
 }
 
+.banner-button {
+  background: var(--color-gray-900);
+  border-radius: 4px;
+  color: var(--color-gray-100);
+  margin-top: 16px;
+  padding: 4px 8px;
+}
+
+.banner-button:hover {
+  background: var(--color-gray-700);
+}
+
+.banner-button:active {
+  background: var(--color-gray-500);
+}
+
 .visually-hidden {
   position: absolute;
   overflow: hidden;
